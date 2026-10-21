@@ -1,0 +1,533 @@
+[
+  {
+    "scenario": "single-full",
+    "client": "codex",
+    "totals": {
+      "baseline": {
+        "regular_input": 86302,
+        "cache_write": 0,
+        "cache_read": 358656,
+        "output": 691,
+        "total": 445649,
+        "tool_calls": 6,
+        "tool_output_bytes": 173268
+      },
+      "improved": {
+        "regular_input": 46303,
+        "cache_write": 0,
+        "cache_read": 308736,
+        "output": 1586,
+        "total": 356625,
+        "tool_calls": 6,
+        "tool_output_bytes": 8352
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 19.976259343115323,
+      "paired_reduction_percent": [
+        9.430012598259237,
+        29.27012537464646
+      ],
+      "tool_output_byte_reduction_percent": 95.17972158736755
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 93508,
+        "improved": 82461,
+        "baseline_reduction_percent": 11.813962441716217
+      },
+      {
+        "stage": 2,
+        "baseline": 55765,
+        "improved": 49829,
+        "baseline_reduction_percent": 10.644669595624496
+      },
+      {
+        "stage": 3,
+        "baseline": 133188,
+        "improved": 110859,
+        "baseline_reduction_percent": 16.765023876024866
+      },
+      {
+        "stage": 4,
+        "baseline": 163188,
+        "improved": 113476,
+        "baseline_reduction_percent": 30.463024241978577
+      }
+    ]
+  },
+  {
+    "scenario": "single-full",
+    "client": "claude",
+    "totals": {
+      "baseline": {
+        "regular_input": 1272,
+        "cache_write": 51971,
+        "cache_read": 253452,
+        "output": 1677,
+        "total": 308372,
+        "tool_calls": 6,
+        "tool_output_bytes": 173602
+      },
+      "improved": {
+        "regular_input": 1272,
+        "cache_write": 7478,
+        "cache_read": 149232,
+        "output": 2331,
+        "total": 160313,
+        "tool_calls": 6,
+        "tool_output_bytes": 8346
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 48.01311403110529,
+      "paired_reduction_percent": [
+        47.95202784307105,
+        48.0740577588329
+      ],
+      "tool_output_byte_reduction_percent": 95.1924516998652
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 54700,
+        "improved": 42695,
+        "baseline_reduction_percent": 21.946983546617915
+      },
+      {
+        "stage": 2,
+        "baseline": 35724,
+        "improved": 21832,
+        "baseline_reduction_percent": 38.88702272981749
+      },
+      {
+        "stage": 3,
+        "baseline": 90684,
+        "improved": 46090,
+        "baseline_reduction_percent": 49.17515769044153
+      },
+      {
+        "stage": 4,
+        "baseline": 127264,
+        "improved": 49696,
+        "baseline_reduction_percent": 60.95046517475484
+      }
+    ]
+  },
+  {
+    "scenario": "single-full",
+    "client": "cursor",
+    "totals": {
+      "baseline": {
+        "regular_input": 51009,
+        "cache_write": 0,
+        "cache_read": 270881,
+        "output": 1965,
+        "total": 323855,
+        "tool_calls": 6,
+        "tool_output_bytes": 173268
+      },
+      "improved": {
+        "regular_input": 42552,
+        "cache_write": 0,
+        "cache_read": 286570,
+        "output": 3748,
+        "total": 332870,
+        "tool_calls": 9,
+        "tool_output_bytes": 11344
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": -2.7836531781198377,
+      "paired_reduction_percent": [
+        3.528750262601797,
+        -9.089394060970417
+      ],
+      "tool_output_byte_reduction_percent": 93.45291686866588
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 76536,
+        "improved": 109913,
+        "baseline_reduction_percent": -43.60954322149054
+      },
+      {
+        "stage": 2,
+        "baseline": 42600,
+        "improved": 38960,
+        "baseline_reduction_percent": 8.544600938967136
+      },
+      {
+        "stage": 3,
+        "baseline": 94055,
+        "improved": 79135,
+        "baseline_reduction_percent": 15.863058848546064
+      },
+      {
+        "stage": 4,
+        "baseline": 110664,
+        "improved": 104862,
+        "baseline_reduction_percent": 5.242897419214921
+      }
+    ]
+  },
+  {
+    "scenario": "multi-full",
+    "client": "codex",
+    "totals": {
+      "baseline": {
+        "regular_input": 93532,
+        "cache_write": 0,
+        "cache_read": 608000,
+        "output": 1925,
+        "total": 703457,
+        "tool_calls": 18,
+        "tool_output_bytes": 526300
+      },
+      "improved": {
+        "regular_input": 42857,
+        "cache_write": 0,
+        "cache_read": 284032,
+        "output": 2343,
+        "total": 329232,
+        "tool_calls": 6,
+        "tool_output_bytes": 14572
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 53.19799220137123,
+      "paired_reduction_percent": [
+        51.91119994289385,
+        54.473830230556686
+      ],
+      "tool_output_byte_reduction_percent": 97.23123693710811
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 151176,
+        "improved": 83946,
+        "baseline_reduction_percent": 44.471344657882206
+      },
+      {
+        "stage": 2,
+        "baseline": 56812,
+        "improved": 43512,
+        "baseline_reduction_percent": 23.410547067520945
+      },
+      {
+        "stage": 3,
+        "baseline": 217548,
+        "improved": 98996,
+        "baseline_reduction_percent": 54.494640263298216
+      },
+      {
+        "stage": 4,
+        "baseline": 277921,
+        "improved": 102778,
+        "baseline_reduction_percent": 63.018987410091356
+      }
+    ]
+  },
+  {
+    "scenario": "multi-full",
+    "client": "claude",
+    "totals": {
+      "baseline": {
+        "regular_input": 1302,
+        "cache_write": 18644,
+        "cache_read": 260657,
+        "output": 5114,
+        "total": 285717,
+        "tool_calls": 15,
+        "tool_output_bytes": 27397
+      },
+      "improved": {
+        "regular_input": 1284,
+        "cache_write": 13934,
+        "cache_read": 158083,
+        "output": 3503,
+        "total": 176804,
+        "tool_calls": 6,
+        "tool_output_bytes": 14566
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 38.119187867715254,
+      "paired_reduction_percent": [
+        33.07979616216298,
+        42.4626111889479
+      ],
+      "tool_output_byte_reduction_percent": 46.83359491915173
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 113979,
+        "improved": 44853,
+        "baseline_reduction_percent": 60.648014107861975
+      },
+      {
+        "stage": 2,
+        "baseline": 23963,
+        "improved": 24017,
+        "baseline_reduction_percent": -0.2253474105913283
+      },
+      {
+        "stage": 3,
+        "baseline": 68540,
+        "improved": 51456,
+        "baseline_reduction_percent": 24.925590895827256
+      },
+      {
+        "stage": 4,
+        "baseline": 79235,
+        "improved": 56478,
+        "baseline_reduction_percent": 28.720893544519466
+      }
+    ]
+  },
+  {
+    "scenario": "multi-full",
+    "client": "cursor",
+    "totals": {
+      "baseline": {
+        "regular_input": 43932,
+        "cache_write": 0,
+        "cache_read": 459705,
+        "output": 4803,
+        "total": 508440,
+        "tool_calls": 35,
+        "tool_output_bytes": 57088
+      },
+      "improved": {
+        "regular_input": 35588,
+        "cache_write": 0,
+        "cache_read": 261530,
+        "output": 4143,
+        "total": 301261,
+        "tool_calls": 7,
+        "tool_output_bytes": 15553
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 40.747974195578635,
+      "paired_reduction_percent": [
+        42.47587669361266,
+        38.61221545931112
+      ],
+      "tool_output_byte_reduction_percent": 72.75609585201794
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 161005,
+        "improved": 93391,
+        "baseline_reduction_percent": 41.9949691003385
+      },
+      {
+        "stage": 2,
+        "baseline": 46874,
+        "improved": 39224,
+        "baseline_reduction_percent": 16.32034816742757
+      },
+      {
+        "stage": 3,
+        "baseline": 146136,
+        "improved": 82173,
+        "baseline_reduction_percent": 43.76950238134341
+      },
+      {
+        "stage": 4,
+        "baseline": 154425,
+        "improved": 86473,
+        "baseline_reduction_percent": 44.00323781771086
+      }
+    ]
+  },
+  {
+    "scenario": "multi-focused",
+    "client": "codex",
+    "totals": {
+      "baseline": {
+        "regular_input": 39688,
+        "cache_write": 0,
+        "cache_read": 299904,
+        "output": 2121,
+        "total": 341713,
+        "tool_calls": 6,
+        "tool_output_bytes": 24296
+      },
+      "improved": {
+        "regular_input": 49077,
+        "cache_write": 0,
+        "cache_read": 303616,
+        "output": 2370,
+        "total": 355063,
+        "tool_calls": 6,
+        "tool_output_bytes": 14572
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": -3.9067872747012844,
+      "paired_reduction_percent": [
+        5.824247889171244,
+        -13.62979517571829
+      ],
+      "tool_output_byte_reduction_percent": 40.02304906157392
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 82209,
+        "improved": 83848,
+        "baseline_reduction_percent": -1.993698986728947
+      },
+      {
+        "stage": 2,
+        "baseline": 47027,
+        "improved": 48125,
+        "baseline_reduction_percent": -2.3348289280626022
+      },
+      {
+        "stage": 3,
+        "baseline": 103613,
+        "improved": 104982,
+        "baseline_reduction_percent": -1.3212627759064983
+      },
+      {
+        "stage": 4,
+        "baseline": 108864,
+        "improved": 118108,
+        "baseline_reduction_percent": -8.491328630217518
+      }
+    ]
+  },
+  {
+    "scenario": "multi-focused",
+    "client": "claude",
+    "totals": {
+      "baseline": {
+        "regular_input": 1284,
+        "cache_write": 35015,
+        "cache_read": 217754,
+        "output": 3416,
+        "total": 257469,
+        "tool_calls": 6,
+        "tool_output_bytes": 72018
+      },
+      "improved": {
+        "regular_input": 1284,
+        "cache_write": 9546,
+        "cache_read": 162770,
+        "output": 3592,
+        "total": 177192,
+        "tool_calls": 6,
+        "tool_output_bytes": 14566
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": 31.179287603556155,
+      "paired_reduction_percent": [
+        31.340651486548428,
+        31.017957560505796
+      ],
+      "tool_output_byte_reduction_percent": 79.77450081923963
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 50707,
+        "improved": 44934,
+        "baseline_reduction_percent": 11.385015875520144
+      },
+      {
+        "stage": 2,
+        "baseline": 30798,
+        "improved": 24044,
+        "baseline_reduction_percent": 21.929995454250275
+      },
+      {
+        "stage": 3,
+        "baseline": 75374,
+        "improved": 51548,
+        "baseline_reduction_percent": 31.61036962347759
+      },
+      {
+        "stage": 4,
+        "baseline": 100590,
+        "improved": 56666,
+        "baseline_reduction_percent": 43.66636842628492
+      }
+    ]
+  },
+  {
+    "scenario": "multi-focused",
+    "client": "cursor",
+    "totals": {
+      "baseline": {
+        "regular_input": 34547,
+        "cache_write": 0,
+        "cache_read": 234126,
+        "output": 2932,
+        "total": 271605,
+        "tool_calls": 6,
+        "tool_output_bytes": 24756
+      },
+      "improved": {
+        "regular_input": 34670,
+        "cache_write": 0,
+        "cache_read": 239139,
+        "output": 3685,
+        "total": 277494,
+        "tool_calls": 6,
+        "tool_output_bytes": 14572
+      }
+    },
+    "all_answers_correct": true,
+    "baseline_to_improved": {
+      "reduction_percent": -2.1682222344949467,
+      "paired_reduction_percent": [
+        -2.2124122073270494,
+        -2.124106065511051
+      ],
+      "tool_output_byte_reduction_percent": 41.13750201971239
+    },
+    "stages": [
+      {
+        "stage": 1,
+        "baseline": 71940,
+        "improved": 73538,
+        "baseline_reduction_percent": -2.2212955240478176
+      },
+      {
+        "stage": 2,
+        "baseline": 37496,
+        "improved": 38476,
+        "baseline_reduction_percent": -2.6136121186259866
+      },
+      {
+        "stage": 3,
+        "baseline": 78440,
+        "improved": 80736,
+        "baseline_reduction_percent": -2.927078021417644
+      },
+      {
+        "stage": 4,
+        "baseline": 83729,
+        "improved": 84744,
+        "baseline_reduction_percent": -1.2122442642334197
+      }
+    ]
+  }
+]

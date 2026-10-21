@@ -1,0 +1,2913 @@
+{
+  "date": "2026-10-21",
+  "scenario": "multi-full",
+  "definition": {
+    "projects": [
+      "Lighthouse",
+      "Orchard",
+      "Atlas"
+    ],
+    "baseline": "full"
+  },
+  "versions": {
+    "improved": {
+      "version": "0.1.2",
+      "hashes": {
+        "obsidian_context.py": "04bdc0a6a47d4060f0bb16ebf61d91b632d5f96913c8a858c960b4593c7e76cd",
+        "rules.md": "db82482183e2b1e08f8f9e6c267c78d6adf202d2b203517f0c192b898ae2939d",
+        "setup.py": "fb2453100dd78c6814782017ca19f1e03b0b70da5c2abb76fbc36c67846b7e41"
+      }
+    }
+  },
+  "fixture": {
+    "Atlas.md": {
+      "bytes": 27874,
+      "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f"
+    },
+    "Cedar.md": {
+      "bytes": 27877,
+      "sha256": "b5444a9e05ad0a5092a95c86e9b55cdbd2acb51ed4a4868dac410dc2a4e72a0f"
+    },
+    "Comet.md": {
+      "bytes": 27882,
+      "sha256": "65dcffb4f1bc3266cda7e976e1563315eb1d98e7e8003562a0c91426c132d6c9"
+    },
+    "Harbor.md": {
+      "bytes": 27882,
+      "sha256": "7951a6474d526099542214a0265900ef2c10d67eefec151eff858a73d3ad3540"
+    },
+    "Juniper.md": {
+      "bytes": 27880,
+      "sha256": "b3994eeba0bec618c9e36fa2aed19fa7e60509c9e3c75e5e609ff3c43f4d0b3e"
+    },
+    "Lighthouse.md": {
+      "bytes": 27894,
+      "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea"
+    },
+    "Maple.md": {
+      "bytes": 27877,
+      "sha256": "7947a0c521bc1077372634b6be3261d95c38baf5207a14ae163e04d4beb7e65a"
+    },
+    "Meadow.md": {
+      "bytes": 27885,
+      "sha256": "f3b80813f1f6c467a0e4cb20457cdd1ea415ce7748768480456af15fcb86fae0"
+    },
+    "Orchard.md": {
+      "bytes": 27888,
+      "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b"
+    },
+    "Quartz.md": {
+      "bytes": 27877,
+      "sha256": "22ce815d0fb227505e8df1d5f91d98d9e494bc463bee05886e3de2d9567a747a"
+    },
+    "Summit.md": {
+      "bytes": 27880,
+      "sha256": "769b986fbadd91ff6655c62d36deb9be4988060ad324b8a1911fb948cc0e9a3e"
+    },
+    "Willow.md": {
+      "bytes": 27882,
+      "sha256": "1418b30568a5718174c9d349b09038444e2fcedbba2630ef7e52e8b94aae86b9"
+    }
+  },
+  "models": {
+    "codex": "gpt-6.1-sol",
+    "claude": "claude-opus-5",
+    "cursor": "composer-2.5"
+  },
+  "client_versions": {
+    "codex": "codex-cli 0.163.0-alpha.10.2",
+    "claude": "2.1.233 (Claude Code)",
+    "agent": "2026.10.19-6bbf2c4"
+  },
+  "order": [
+    [
+      "omitted-arm",
+      "improved",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "improved",
+      "omitted-arm"
+    ]
+  ],
+  "prompts": [
+    "This is the isolated fictional long-note benchmark. Follow the workspace rules. For Lighthouse, Orchard, Atlas, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts.",
+    "Repeat the same compact JSON using only the facts already in this conversation; no tools.",
+    "We are resuming substantive work. Verify the current LOCAL policy and relevant project notes. For Lighthouse, Orchard, Atlas, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts.",
+    "We are resuming substantive work. Verify the current LOCAL policy and relevant project notes. For Lighthouse, Orchard, Atlas, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts."
+  ],
+  "rendered_rule_bytes": {
+    "codex": {
+      "improved": 2806
+    },
+    "claude": {
+      "improved": 2809
+    },
+    "cursor": {
+      "improved": 2873
+    }
+  },
+  "metric": "Client-reported input including cache plus output; not money or quota",
+  "tool_output_metric": "UTF-8 tool body bytes; not model tokens; excludes event wrappers",
+  "comparisons": [
+    {
+      "client": "codex",
+      "totals": {
+        "baseline": {
+          "regular_input": 93532,
+          "cache_write": 0,
+          "cache_read": 608000,
+          "output": 1925,
+          "total": 703457,
+          "tool_calls": 18,
+          "tool_output_bytes": 526300
+        },
+        "improved": {
+          "regular_input": 42857,
+          "cache_write": 0,
+          "cache_read": 284032,
+          "output": 2343,
+          "total": 329232,
+          "tool_calls": 6,
+          "tool_output_bytes": 14572
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": 53.19799220137123,
+        "paired_reduction_percent": [
+          51.91119994289385,
+          54.473830230556686
+        ],
+        "tool_output_byte_reduction_percent": 97.23123693710811
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 151176,
+          "improved": 83946,
+          "baseline_reduction_percent": 44.471344657882206
+        },
+        {
+          "stage": 2,
+          "baseline": 56812,
+          "improved": 43512,
+          "baseline_reduction_percent": 23.410547067520945
+        },
+        {
+          "stage": 3,
+          "baseline": 217548,
+          "improved": 98996,
+          "baseline_reduction_percent": 54.494640263298216
+        },
+        {
+          "stage": 4,
+          "baseline": 277921,
+          "improved": 102778,
+          "baseline_reduction_percent": 63.018987410091356
+        }
+      ]
+    },
+    {
+      "client": "claude",
+      "totals": {
+        "baseline": {
+          "regular_input": 1302,
+          "cache_write": 18644,
+          "cache_read": 260657,
+          "output": 5114,
+          "total": 285717,
+          "tool_calls": 15,
+          "tool_output_bytes": 27397
+        },
+        "improved": {
+          "regular_input": 1284,
+          "cache_write": 13934,
+          "cache_read": 158083,
+          "output": 3503,
+          "total": 176804,
+          "tool_calls": 6,
+          "tool_output_bytes": 14566
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": 38.119187867715254,
+        "paired_reduction_percent": [
+          33.07979616216298,
+          42.4626111889479
+        ],
+        "tool_output_byte_reduction_percent": 46.83359491915173
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 113979,
+          "improved": 44853,
+          "baseline_reduction_percent": 60.648014107861975
+        },
+        {
+          "stage": 2,
+          "baseline": 23963,
+          "improved": 24017,
+          "baseline_reduction_percent": -0.2253474105913283
+        },
+        {
+          "stage": 3,
+          "baseline": 68540,
+          "improved": 51456,
+          "baseline_reduction_percent": 24.925590895827256
+        },
+        {
+          "stage": 4,
+          "baseline": 79235,
+          "improved": 56478,
+          "baseline_reduction_percent": 28.720893544519466
+        }
+      ]
+    },
+    {
+      "client": "cursor",
+      "totals": {
+        "baseline": {
+          "regular_input": 43932,
+          "cache_write": 0,
+          "cache_read": 459705,
+          "output": 4803,
+          "total": 508440,
+          "tool_calls": 35,
+          "tool_output_bytes": 57088
+        },
+        "improved": {
+          "regular_input": 35588,
+          "cache_write": 0,
+          "cache_read": 261530,
+          "output": 4143,
+          "total": 301261,
+          "tool_calls": 7,
+          "tool_output_bytes": 15553
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": 40.747974195578635,
+        "paired_reduction_percent": [
+          42.47587669361266,
+          38.61221545931112
+        ],
+        "tool_output_byte_reduction_percent": 72.75609585201794
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 161005,
+          "improved": 93391,
+          "baseline_reduction_percent": 41.9949691003385
+        },
+        {
+          "stage": 2,
+          "baseline": 46874,
+          "improved": 39224,
+          "baseline_reduction_percent": 16.32034816742757
+        },
+        {
+          "stage": 3,
+          "baseline": 146136,
+          "improved": 82173,
+          "baseline_reduction_percent": 43.76950238134341
+        },
+        {
+          "stage": 4,
+          "baseline": 154425,
+          "improved": 86473,
+          "baseline_reduction_percent": 44.00323781771086
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 55127,
+      "cache_write": 0,
+      "cache_read": 294144,
+      "output": 954,
+      "total": 350225,
+      "tool_calls": 9,
+      "tool_output_bytes": 263150,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 29645,
+      "cache_write": 0,
+      "cache_read": 137600,
+      "output": 1174,
+      "total": 168419,
+      "tool_calls": 3,
+      "tool_output_bytes": 7286,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 38405,
+      "cache_write": 0,
+      "cache_read": 313856,
+      "output": 971,
+      "total": 353232,
+      "tool_calls": 9,
+      "tool_output_bytes": 263150,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 13212,
+      "cache_write": 0,
+      "cache_read": 146432,
+      "output": 1169,
+      "total": 160813,
+      "tool_calls": 3,
+      "tool_output_bytes": 7286,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 650,
+      "cache_write": 11300,
+      "cache_read": 117926,
+      "output": 2386,
+      "total": 132262,
+      "tool_calls": 7,
+      "tool_output_bytes": 13953,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 1,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 642,
+      "cache_write": 9230,
+      "cache_read": 76854,
+      "output": 1784,
+      "total": 88510,
+      "tool_calls": 3,
+      "tool_output_bytes": 7283,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 652,
+      "cache_write": 7344,
+      "cache_read": 142731,
+      "output": 2728,
+      "total": 153455,
+      "tool_calls": 8,
+      "tool_output_bytes": 13444,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 1,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 642,
+      "cache_write": 4704,
+      "cache_read": 81229,
+      "output": 1719,
+      "total": 88294,
+      "tool_calls": 3,
+      "tool_output_bytes": 7283,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 22007,
+      "cache_write": 0,
+      "cache_read": 257030,
+      "output": 2019,
+      "total": 281056,
+      "tool_calls": 9,
+      "tool_output_bytes": 29971,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 18119,
+      "cache_write": 0,
+      "cache_read": 141380,
+      "output": 2176,
+      "total": 161675,
+      "tool_calls": 4,
+      "tool_output_bytes": 8267,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 21925,
+      "cache_write": 0,
+      "cache_read": 202675,
+      "output": 2784,
+      "total": 227384,
+      "tool_calls": 26,
+      "tool_output_bytes": 27117,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 17469,
+      "cache_write": 0,
+      "cache_read": 120150,
+      "output": 1967,
+      "total": 139586,
+      "tool_calls": 3,
+      "tool_output_bytes": 7286,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    }
+  ],
+  "turns": [
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 2,
+      "elapsed_seconds": 12.457,
+      "events_sha256": "089359feb76dd4a55eae13f02ae04cb9ecc89e5650db9633e4b5fe8dc2479a24",
+      "regular_input": 24998,
+      "cache_write": 0,
+      "cache_read": 52736,
+      "output": 267,
+      "total": 78001,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87870
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 7.277,
+      "events_sha256": "ad5a2889d4d2c3c7c69055e8fd073ab64362b76e0bd1a11a7e1f620c4166cd8f",
+      "regular_input": 8906,
+      "cache_write": 0,
+      "cache_read": 20224,
+      "output": 80,
+      "total": 29210,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 13.393,
+      "events_sha256": "bd325df1e7ebf744d2404013dcca04ee147a2ff506bddad62c092a0cd6053530",
+      "regular_input": 9087,
+      "cache_write": 0,
+      "cache_read": 94720,
+      "output": 275,
+      "total": 104082,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87640
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 5,
+      "elapsed_seconds": 13.649,
+      "events_sha256": "a07c8ebe2a9a2a7803410299d9f657ee0dde7b7d3229e9896cf8d74153b27109",
+      "regular_input": 12136,
+      "cache_write": 0,
+      "cache_read": 126464,
+      "output": 332,
+      "total": 138932,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87640
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 13.225,
+      "events_sha256": "dfc91dddf754238624b530e727c52a003d7b2c907ede0d6a2f2c2cdc0a9b22d6",
+      "regular_input": 8478,
+      "cache_write": 0,
+      "cache_read": 31616,
+      "output": 266,
+      "total": 40360,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5034
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 7.76,
+      "events_sha256": "6c9e95f6fb32e4209511103b785dae502e76c0cd7bd9c65339caf8017192f7d3",
+      "regular_input": 261,
+      "cache_write": 0,
+      "cache_read": 20608,
+      "output": 80,
+      "total": 20949,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.421,
+      "events_sha256": "5a982b45cc5860d31757e7e27b86dfa1254d4c444a9be32e8bef91cdc94fabc7",
+      "regular_input": 19172,
+      "cache_write": 0,
+      "cache_read": 33024,
+      "output": 412,
+      "total": 52608,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 542
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 16.93,
+      "events_sha256": "9b50e725049bb41be605f1f297ca69bfaf86935916e6fd5bb3916b083af881b4",
+      "regular_input": 1734,
+      "cache_write": 0,
+      "cache_read": 52352,
+      "output": 416,
+      "total": 54502,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1710
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 2,
+      "elapsed_seconds": 14.216,
+      "events_sha256": "48558fd9f64fa76de0b388eb7d03f7acd348f7d911c921acf66e74ce0e3ab428",
+      "regular_input": 15434,
+      "cache_write": 0,
+      "cache_read": 57472,
+      "output": 269,
+      "total": 73175,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87870
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 6.573,
+      "events_sha256": "63bc76725437dccaea838d1d26cfb4b41486aad11af4aaa75e9f15f72922a3ce",
+      "regular_input": 258,
+      "cache_write": 0,
+      "cache_read": 27264,
+      "output": 80,
+      "total": 27602,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 16.685,
+      "events_sha256": "4f3ce60940f017120330a89ca7fcee0650a09ed3061ebf403aaad2f97b5bba51",
+      "regular_input": 13721,
+      "cache_write": 0,
+      "cache_read": 99456,
+      "output": 289,
+      "total": 113466,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87640
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 5,
+      "elapsed_seconds": 15.902,
+      "events_sha256": "a91f6504bccfc5665a0a7251bc720d20f9d6f564f51bcdfd18621ade2bb3df2f",
+      "regular_input": 8992,
+      "cache_write": 0,
+      "cache_read": 129664,
+      "output": 333,
+      "total": 138989,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "command_execution",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 87640
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 13.46,
+      "events_sha256": "172f4488b5ba5c679dc8421d2d687188e80ea336df2ec0a0beedede2fcf11776",
+      "regular_input": 10296,
+      "cache_write": 0,
+      "cache_read": 33024,
+      "output": 266,
+      "total": 43586,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5034
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 5.81,
+      "events_sha256": "978de3e9aec07e54aea586e456270e838b479d0b317d6a9b8adebee43267d8ad",
+      "regular_input": 339,
+      "cache_write": 0,
+      "cache_read": 22144,
+      "output": 80,
+      "total": 22563,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 15.022,
+      "events_sha256": "9ff96ecbb39b36381900027ecfa2b4e15a0ec828ae46b294e6c9ad06c93867a9",
+      "regular_input": 1178,
+      "cache_write": 0,
+      "cache_read": 44800,
+      "output": 410,
+      "total": 46388,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 542
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.027,
+      "events_sha256": "e063f4480a238b3bdcd555137437424216bfc99113e76b909800589c86ad9034",
+      "regular_input": 1399,
+      "cache_write": 0,
+      "cache_read": 46464,
+      "output": 413,
+      "total": 48276,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1710
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 5,
+      "elapsed_seconds": 21.625,
+      "events_sha256": "5ff1ea7b63fcc796e0f05979b99ff9c6246ba5a76f628da4886b2b396c61990b",
+      "regular_input": 640,
+      "cache_write": 6257,
+      "cache_read": 54320,
+      "output": 1096,
+      "total": 62313,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "size-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": []
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 1,
+      "tool_output_bytes": 4891
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 3.941,
+      "events_sha256": "fcf6de3a127c019bf5154c4871da7ddad2110e6976d38277cd7df6ba718bed5c",
+      "regular_input": 2,
+      "cache_write": 167,
+      "cache_read": 11434,
+      "output": 138,
+      "total": 11741,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 13.511,
+      "events_sha256": "7b3d970f561e062c06affa245be69bb9f555a43af5986cdfba2899bf8a2edc68",
+      "regular_input": 4,
+      "cache_write": 2566,
+      "cache_read": 23520,
+      "output": 684,
+      "total": 26774,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 4531
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 9.898,
+      "events_sha256": "cc7c2a8ba03372176804ef3043020ff6e763b56406d371e45c396be4eecdc872",
+      "regular_input": 4,
+      "cache_write": 2310,
+      "cache_read": 28652,
+      "output": 468,
+      "total": 31434,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}\n\nLighthouse's channel changed from blue to teal since the earlier read; Orchard and Atlas are unchanged.",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 4531
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.519,
+      "events_sha256": "a7341450d54817d62595a06ccefeabd49ee73fc2f11dfe200fed6e1def34fa88",
+      "regular_input": 632,
+      "cache_write": 6517,
+      "cache_read": 14836,
+      "output": 445,
+      "total": 22430,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5033
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 4.28,
+      "events_sha256": "61f43345bc767e7a9918fe87f82d24bf6fb23eef66789004ca6b181e5a6e5245",
+      "regular_input": 2,
+      "cache_write": 167,
+      "cache_read": 11694,
+      "output": 154,
+      "total": 12017,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 11.306,
+      "events_sha256": "9f180dd0f2acbb2d14fe0aa1185886598c925ec0b058d237ca6189525f3793e0",
+      "regular_input": 4,
+      "cache_write": 1114,
+      "cache_read": 24056,
+      "output": 598,
+      "total": 25772,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 541
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 10.296,
+      "events_sha256": "62b16456c0fce9ae4fdd711cef66db8904783b7a2439bb1cfdaf3c1b522137d8",
+      "regular_input": 4,
+      "cache_write": 1432,
+      "cache_read": 26268,
+      "output": 587,
+      "total": 28291,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1709
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 4,
+      "elapsed_seconds": 18.237,
+      "events_sha256": "df0e3a33cef7b3a3a559d6a2fa0c74df84f9208600e1f601637d0fd541f63745",
+      "regular_input": 638,
+      "cache_write": 2716,
+      "cache_read": 47300,
+      "output": 1012,
+      "total": 51666,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "size-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 1,
+      "tool_output_bytes": 6444
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 4.051,
+      "events_sha256": "4867e9373fd46bd97ff96ffbfe2699ab09516bba60378e3706a67e1ee46a70e2",
+      "regular_input": 2,
+      "cache_write": 167,
+      "cache_read": 11915,
+      "output": 138,
+      "total": 12222,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 20.399,
+      "events_sha256": "80c3c5ce25c04a2c2f6780ed85f1259bace5b595ec77d5d23d45b9da1d0df9dd",
+      "regular_input": 6,
+      "cache_write": 2435,
+      "cache_read": 38306,
+      "output": 1019,
+      "total": 41766,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 3500
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 2,
+      "elapsed_seconds": 11.494,
+      "events_sha256": "b7a73d72fde24f85fcc67fac293f1371d4f105edb94d76e0ede3b7a7cba27b36",
+      "regular_input": 6,
+      "cache_write": 2026,
+      "cache_read": 45210,
+      "output": 559,
+      "total": 47801,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "Bash",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 3500
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.781,
+      "events_sha256": "4409176800816b51f6500f074641a6f830c7e368829c5b78a8b1c733c0041268",
+      "regular_input": 632,
+      "cache_write": 2034,
+      "cache_read": 19318,
+      "output": 439,
+      "total": 22423,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5033
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 4.08,
+      "events_sha256": "8fb5173ab7f183a4ae40dd24060ca5114b06c400054a209fd0054f821448a7ef",
+      "regular_input": 2,
+      "cache_write": 167,
+      "cache_read": 11693,
+      "output": 138,
+      "total": 12000,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 10.288,
+      "events_sha256": "b96593d129298a52cf6167a9313543f502938a08b792de671afddaab77556c42",
+      "regular_input": 4,
+      "cache_write": 1071,
+      "cache_read": 24038,
+      "output": 571,
+      "total": 25684,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 541
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 9.152,
+      "events_sha256": "ea1c46303f02cacfdb2d7ec55fe991db905f0b18f753a70927f2dc125ebd1fb6",
+      "regular_input": 4,
+      "cache_write": 1432,
+      "cache_read": 26180,
+      "output": 571,
+      "total": 28187,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1709
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 4,
+      "elapsed_seconds": 22.897,
+      "events_sha256": "b418df3f0997bb4c29ad417b6252721d5dd09f0b945e3a7b3a2fc0ba18e6cbc6",
+      "regular_input": 19285,
+      "cache_write": 0,
+      "cache_read": 61133,
+      "output": 944,
+      "total": 81362,
+      "answer": "ワークスペースルールに従い、ポリシーと3プロジェクトノートを読みます。\n\n\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [],
+          "target": "current-tool-output"
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 27484
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.121,
+      "events_sha256": "9f98ef3d893aa2c4e826aa6380bf3577a9b22381f1666cb955f9df5e8ba07ec6",
+      "regular_input": 205,
+      "cache_write": 0,
+      "cache_read": 23322,
+      "output": 110,
+      "total": 23637,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 14.791,
+      "events_sha256": "01dfb9bfb75b5d96343f6ec0ae5e5ef12098d234a285743e1245387bbba37881",
+      "regular_input": 1366,
+      "cache_write": 0,
+      "cache_read": 71442,
+      "output": 436,
+      "total": 73244,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1972
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 3,
+      "elapsed_seconds": 18.154,
+      "events_sha256": "8945c6c30ac1d34f248669874e39aa0aafa2d420fed29fe20a755c1ab92bf71b",
+      "regular_input": 1151,
+      "cache_write": 0,
+      "cache_read": 101133,
+      "output": 529,
+      "total": 102813,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 515
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 2,
+      "elapsed_seconds": 21.73,
+      "events_sha256": "22c8c5df4e4f7977f8545296c9a11c9d1463d124e5029a685f38b61471153199",
+      "regular_input": 15385,
+      "cache_write": 0,
+      "cache_read": 40224,
+      "output": 836,
+      "total": 56445,
+      "answer": "デモ vault の該当ノートとポリシーを取得します。\nポリシー全文を取得し、Git 同期の記載を確認します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        },
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ],
+          "compact": false,
+          "explicit_section": false,
+          "both_required_headings_named": false
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5635
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.022,
+      "events_sha256": "210e98edf569397ec366d61210f0cc9632d9754f6a667fbdf2d5298ff62a9155",
+      "regular_input": 288,
+      "cache_write": 0,
+      "cache_read": 19417,
+      "output": 106,
+      "total": 19811,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 18.173,
+      "events_sha256": "fb0cbe8b71820e48fe138d50292feedb0aabbbffcc5953ec35f3725d421a042d",
+      "regular_input": 1197,
+      "cache_write": 0,
+      "cache_read": 39655,
+      "output": 725,
+      "total": 41577,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 732
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 16.621,
+      "events_sha256": "3107ab690c2d188f40c7cd338f2ba1a40f039f3a8a6b350a84e7b6c36fb92348",
+      "regular_input": 1249,
+      "cache_write": 0,
+      "cache_read": 42084,
+      "output": 509,
+      "total": 43842,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1900
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 11,
+      "elapsed_seconds": 23.3,
+      "events_sha256": "6b3dfdf9434eaeba5fa40ab1cc76dde5e73b6f01dc134e121f5a69b260f2549a",
+      "regular_input": 18768,
+      "cache_write": 0,
+      "cache_read": 59592,
+      "output": 1283,
+      "total": 79643,
+      "answer": "ポリシーと3プロジェクトノートを読み、リリース情報を抽出します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "current-tool-output"
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [],
+          "target": "all-projects-directory"
+        },
+        {
+          "tool": "grepToolCall",
+          "mode": "search",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [],
+          "target": "current-tool-output"
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 22635
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.224,
+      "events_sha256": "90b04efbc63023c942c30fbdd0a1f58ba80c201e1f6c64fff45f0c7b546d5d31",
+      "regular_input": 320,
+      "cache_write": 0,
+      "cache_read": 22805,
+      "output": 112,
+      "total": 23237,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 8,
+      "elapsed_seconds": 18.897,
+      "events_sha256": "cbc7dcd254956302f2551555ea2c39d376782a4047f44da3a65ebde794fc6fc4",
+      "regular_input": 1777,
+      "cache_write": 0,
+      "cache_read": 70252,
+      "output": 863,
+      "total": 72892,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "filtered-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 3183
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 7,
+      "elapsed_seconds": 14.957,
+      "events_sha256": "4e3478ee65e0e6ed654e78310119c89a86322332bb5348555fe994ec13e9a024",
+      "regular_input": 1060,
+      "cache_write": 0,
+      "cache_read": 50026,
+      "output": 526,
+      "total": 51612,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Orchard.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        },
+        {
+          "tool": "readToolCall",
+          "mode": "partial-file-read",
+          "notes": [
+            "Projects/Atlas.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1299
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 15.734,
+      "events_sha256": "51f7276740215f1aa4d6c76ad871398ee11ca30d8218c5cb1d166f23dc7dbeb9",
+      "regular_input": 14815,
+      "cache_write": 0,
+      "cache_read": 21419,
+      "output": 712,
+      "total": 36946,
+      "answer": "デモ vault の該当ノートとポリシーを取得します。\n\n\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 5034
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 9.89,
+      "events_sha256": "5957bb98cab7df662b27ae28679ec4442f50ff8d98c2f559c83ce4c8b7df35c6",
+      "regular_input": 459,
+      "cache_write": 0,
+      "cache_read": 18848,
+      "output": 106,
+      "total": 19413,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 15.902,
+      "events_sha256": "cf231e6763f5b289ac67c6444a10639e0b9af6467ecdcb201365407bc8a8cfac",
+      "regular_input": 1069,
+      "cache_write": 0,
+      "cache_read": 38859,
+      "output": 668,
+      "total": 40596,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 542
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 16.842,
+      "events_sha256": "65e8899fc542b1797a08b3269cedce3a155ee03de694bdd13a879325b39c7f7c",
+      "regular_input": 1126,
+      "cache_write": 0,
+      "cache_read": 41024,
+      "output": 481,
+      "total": 42631,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"},{\"project\":\"Orchard\",\"channel\":\"gold\",\"reviewer\":\"Kian\",\"blocker\":\"accessibility review\"},{\"project\":\"Atlas\",\"channel\":\"rose\",\"reviewer\":\"Nora\",\"blocker\":\"restore test\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Orchard.md",
+          "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Atlas.md",
+          "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Atlas.md",
+            "Projects/Lighthouse.md",
+            "Projects/Orchard.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1710
+    }
+  ],
+  "publication_scope": "Current-kit and direct-read subset of the 2026-10-21 measurement batch. Omitted-arm results are not published here; no remeasurement or cache reset. All direct/current trials and their original counters are retained."
+}

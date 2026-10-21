@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "scopes": {
+    "team": {
+      "root": "~/Documents/Knowledge/Team",
+      "policy": "Policies/Knowledge policy.md",
+      "sync": "git",
+      "owners": ["your-github-organization"]
+    },
+    "personal": {
+      "root": "~/Documents/Knowledge/Personal",
+      "policy": "Policies/Knowledge policy.md",
+      "sync": "local",
+      "owners": []
+    }
+  }
+}

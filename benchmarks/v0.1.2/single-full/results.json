@@ -1,0 +1,2320 @@
+{
+  "date": "2026-10-21",
+  "scenario": "single-full",
+  "definition": {
+    "projects": [
+      "Lighthouse"
+    ],
+    "baseline": "full"
+  },
+  "versions": {
+    "improved": {
+      "version": "0.1.2",
+      "hashes": {
+        "obsidian_context.py": "04bdc0a6a47d4060f0bb16ebf61d91b632d5f96913c8a858c960b4593c7e76cd",
+        "rules.md": "db82482183e2b1e08f8f9e6c267c78d6adf202d2b203517f0c192b898ae2939d",
+        "setup.py": "fb2453100dd78c6814782017ca19f1e03b0b70da5c2abb76fbc36c67846b7e41"
+      }
+    }
+  },
+  "fixture": {
+    "Atlas.md": {
+      "bytes": 27874,
+      "sha256": "ae424424a8e633605084de97bf484c98f5275bd360fb46b94c0e149f2b6a1e2f"
+    },
+    "Cedar.md": {
+      "bytes": 27877,
+      "sha256": "b5444a9e05ad0a5092a95c86e9b55cdbd2acb51ed4a4868dac410dc2a4e72a0f"
+    },
+    "Comet.md": {
+      "bytes": 27882,
+      "sha256": "65dcffb4f1bc3266cda7e976e1563315eb1d98e7e8003562a0c91426c132d6c9"
+    },
+    "Harbor.md": {
+      "bytes": 27882,
+      "sha256": "7951a6474d526099542214a0265900ef2c10d67eefec151eff858a73d3ad3540"
+    },
+    "Juniper.md": {
+      "bytes": 27880,
+      "sha256": "b3994eeba0bec618c9e36fa2aed19fa7e60509c9e3c75e5e609ff3c43f4d0b3e"
+    },
+    "Lighthouse.md": {
+      "bytes": 27894,
+      "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea"
+    },
+    "Maple.md": {
+      "bytes": 27877,
+      "sha256": "7947a0c521bc1077372634b6be3261d95c38baf5207a14ae163e04d4beb7e65a"
+    },
+    "Meadow.md": {
+      "bytes": 27885,
+      "sha256": "f3b80813f1f6c467a0e4cb20457cdd1ea415ce7748768480456af15fcb86fae0"
+    },
+    "Orchard.md": {
+      "bytes": 27888,
+      "sha256": "c78c2277cce95de533071352b4c8537022672971472d6aedcfe4dadb10dcf44b"
+    },
+    "Quartz.md": {
+      "bytes": 27877,
+      "sha256": "22ce815d0fb227505e8df1d5f91d98d9e494bc463bee05886e3de2d9567a747a"
+    },
+    "Summit.md": {
+      "bytes": 27880,
+      "sha256": "769b986fbadd91ff6655c62d36deb9be4988060ad324b8a1911fb948cc0e9a3e"
+    },
+    "Willow.md": {
+      "bytes": 27882,
+      "sha256": "1418b30568a5718174c9d349b09038444e2fcedbba2630ef7e52e8b94aae86b9"
+    }
+  },
+  "models": {
+    "codex": "gpt-6.1-sol",
+    "claude": "claude-opus-5",
+    "cursor": "composer-2.5"
+  },
+  "client_versions": {
+    "codex": "codex-cli 0.163.0-alpha.10.2",
+    "claude": "2.1.233 (Claude Code)",
+    "agent": "2026.10.19-6bbf2c4"
+  },
+  "order": [
+    [
+      "baseline",
+      "omitted-arm",
+      "improved"
+    ],
+    [
+      "improved",
+      "omitted-arm",
+      "baseline"
+    ]
+  ],
+  "prompts": [
+    "This is the isolated fictional long-note benchmark. Follow the workspace rules. For Lighthouse, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts.",
+    "Repeat the same compact JSON using only the facts already in this conversation; no tools.",
+    "We are resuming substantive work. Verify the current LOCAL policy and relevant project notes. For Lighthouse, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts.",
+    "We are resuming substantive work. Verify the current LOCAL policy and relevant project notes. For Lighthouse, report the current release channel, reviewer, and unresolved release blocker. Also report whether this demo automatically synchronizes Git. Return only compact JSON, without a code fence, with keys projects (an array of objects with keys project, channel, reviewer, blocker) and automatic_git_sync (boolean). Use project order as requested, exact values from the source, and no extra keys. Do not guess missing facts."
+  ],
+  "rendered_rule_bytes": {
+    "codex": {
+      "improved": 2806
+    },
+    "claude": {
+      "improved": 2809
+    },
+    "cursor": {
+      "improved": 2873
+    }
+  },
+  "metric": "Client-reported input including cache plus output; not money or quota",
+  "tool_output_metric": "UTF-8 tool body bytes; not model tokens; excludes event wrappers",
+  "comparisons": [
+    {
+      "client": "codex",
+      "totals": {
+        "baseline": {
+          "regular_input": 86302,
+          "cache_write": 0,
+          "cache_read": 358656,
+          "output": 691,
+          "total": 445649,
+          "tool_calls": 6,
+          "tool_output_bytes": 173268
+        },
+        "improved": {
+          "regular_input": 46303,
+          "cache_write": 0,
+          "cache_read": 308736,
+          "output": 1586,
+          "total": 356625,
+          "tool_calls": 6,
+          "tool_output_bytes": 8352
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": 19.976259343115323,
+        "paired_reduction_percent": [
+          9.430012598259237,
+          29.27012537464646
+        ],
+        "tool_output_byte_reduction_percent": 95.17972158736755
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 93508,
+          "improved": 82461,
+          "baseline_reduction_percent": 11.813962441716217
+        },
+        {
+          "stage": 2,
+          "baseline": 55765,
+          "improved": 49829,
+          "baseline_reduction_percent": 10.644669595624496
+        },
+        {
+          "stage": 3,
+          "baseline": 133188,
+          "improved": 110859,
+          "baseline_reduction_percent": 16.765023876024866
+        },
+        {
+          "stage": 4,
+          "baseline": 163188,
+          "improved": 113476,
+          "baseline_reduction_percent": 30.463024241978577
+        }
+      ]
+    },
+    {
+      "client": "claude",
+      "totals": {
+        "baseline": {
+          "regular_input": 1272,
+          "cache_write": 51971,
+          "cache_read": 253452,
+          "output": 1677,
+          "total": 308372,
+          "tool_calls": 6,
+          "tool_output_bytes": 173602
+        },
+        "improved": {
+          "regular_input": 1272,
+          "cache_write": 7478,
+          "cache_read": 149232,
+          "output": 2331,
+          "total": 160313,
+          "tool_calls": 6,
+          "tool_output_bytes": 8346
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": 48.01311403110529,
+        "paired_reduction_percent": [
+          47.95202784307105,
+          48.0740577588329
+        ],
+        "tool_output_byte_reduction_percent": 95.1924516998652
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 54700,
+          "improved": 42695,
+          "baseline_reduction_percent": 21.946983546617915
+        },
+        {
+          "stage": 2,
+          "baseline": 35724,
+          "improved": 21832,
+          "baseline_reduction_percent": 38.88702272981749
+        },
+        {
+          "stage": 3,
+          "baseline": 90684,
+          "improved": 46090,
+          "baseline_reduction_percent": 49.17515769044153
+        },
+        {
+          "stage": 4,
+          "baseline": 127264,
+          "improved": 49696,
+          "baseline_reduction_percent": 60.95046517475484
+        }
+      ]
+    },
+    {
+      "client": "cursor",
+      "totals": {
+        "baseline": {
+          "regular_input": 51009,
+          "cache_write": 0,
+          "cache_read": 270881,
+          "output": 1965,
+          "total": 323855,
+          "tool_calls": 6,
+          "tool_output_bytes": 173268
+        },
+        "improved": {
+          "regular_input": 42552,
+          "cache_write": 0,
+          "cache_read": 286570,
+          "output": 3748,
+          "total": 332870,
+          "tool_calls": 9,
+          "tool_output_bytes": 11344
+        }
+      },
+      "all_answers_correct": true,
+      "baseline_to_improved": {
+        "reduction_percent": -2.7836531781198377,
+        "paired_reduction_percent": [
+          3.528750262601797,
+          -9.089394060970417
+        ],
+        "tool_output_byte_reduction_percent": 93.45291686866588
+      },
+      "stages": [
+        {
+          "stage": 1,
+          "baseline": 76536,
+          "improved": 109913,
+          "baseline_reduction_percent": -43.60954322149054
+        },
+        {
+          "stage": 2,
+          "baseline": 42600,
+          "improved": 38960,
+          "baseline_reduction_percent": 8.544600938967136
+        },
+        {
+          "stage": 3,
+          "baseline": 94055,
+          "improved": 79135,
+          "baseline_reduction_percent": 15.863058848546064
+        },
+        {
+          "stage": 4,
+          "baseline": 110664,
+          "improved": 104862,
+          "baseline_reduction_percent": 5.242897419214921
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 38053,
+      "cache_write": 0,
+      "cache_read": 170368,
+      "output": 338,
+      "total": 208759,
+      "tool_calls": 3,
+      "tool_output_bytes": 86634,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 31232,
+      "cache_write": 0,
+      "cache_read": 157056,
+      "output": 785,
+      "total": 189073,
+      "tool_calls": 3,
+      "tool_output_bytes": 4176,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 48249,
+      "cache_write": 0,
+      "cache_read": 188288,
+      "output": 353,
+      "total": 236890,
+      "tool_calls": 3,
+      "tool_output_bytes": 86634,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 15071,
+      "cache_write": 0,
+      "cache_read": 151680,
+      "output": 801,
+      "total": 167552,
+      "tool_calls": 3,
+      "tool_output_bytes": 4176,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 636,
+      "cache_write": 33771,
+      "cache_read": 118793,
+      "output": 806,
+      "total": 154006,
+      "tool_calls": 3,
+      "tool_output_bytes": 86716,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 636,
+      "cache_write": 7478,
+      "cache_read": 70877,
+      "output": 1166,
+      "total": 80157,
+      "tool_calls": 3,
+      "tool_output_bytes": 4173,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 636,
+      "cache_write": 18200,
+      "cache_read": 134659,
+      "output": 871,
+      "total": 154366,
+      "tool_calls": 3,
+      "tool_output_bytes": 86886,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 636,
+      "cache_write": 0,
+      "cache_read": 78355,
+      "output": 1165,
+      "total": 80156,
+      "tool_calls": 3,
+      "tool_output_bytes": 4173,
+      "all_answers_correct": true,
+      "strict_format_passes": 4,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "regular_input": 25491,
+      "cache_write": 0,
+      "cache_read": 135383,
+      "output": 968,
+      "total": 161842,
+      "tool_calls": 3,
+      "tool_output_bytes": 86634,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "regular_input": 25034,
+      "cache_write": 0,
+      "cache_read": 129248,
+      "output": 1849,
+      "total": 156131,
+      "tool_calls": 4,
+      "tool_output_bytes": 4869,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "regular_input": 25518,
+      "cache_write": 0,
+      "cache_read": 135498,
+      "output": 997,
+      "total": 162013,
+      "tool_calls": 3,
+      "tool_output_bytes": 86634,
+      "all_answers_correct": true,
+      "strict_format_passes": 3,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": null,
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "regular_input": 17518,
+      "cache_write": 0,
+      "cache_read": 157322,
+      "output": 1899,
+      "total": 176739,
+      "tool_calls": 5,
+      "tool_output_bytes": 6475,
+      "all_answers_correct": true,
+      "strict_format_passes": 1,
+      "permission_denials": 0,
+      "immediate_zero_calls": true,
+      "helper_checks": {
+        "immediate_zero_calls": true,
+        "all_required_hashes_present": true,
+        "initial_all_content": true,
+        "unchanged_all_unchanged": true,
+        "changed_note_only_content": true,
+        "hashes_match_fixture": true
+      },
+      "same_metadata_update": {
+        "before_sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+        "after_sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+        "same_size": true,
+        "same_mtime": true
+      }
+    }
+  ],
+  "turns": [
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 10.566,
+      "events_sha256": "ef99a77b0d88049b3ddb3a3356de568ababfdf709c6a5788dcf140a9658a9ed5",
+      "regular_input": 22073,
+      "cache_write": 0,
+      "cache_read": 24576,
+      "output": 138,
+      "total": 46787,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 5.685,
+      "events_sha256": "ef96eb5a0776c623f8748d8cdd1b36717dfed1c39debeb9ef4ae8821200a1f3c",
+      "regular_input": 195,
+      "cache_write": 0,
+      "cache_read": 26112,
+      "output": 37,
+      "total": 26344,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.785,
+      "events_sha256": "c6b3d124323cefd268a3944f941a00b0330a2f55328af728f4b095956a916763",
+      "regular_input": 6338,
+      "cache_write": 0,
+      "cache_read": 52352,
+      "output": 81,
+      "total": 58771,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 11.486,
+      "events_sha256": "0a1a7979dff422c4fc600d0b149853a98fa864c9b674cf139a04bc3214886647",
+      "regular_input": 9447,
+      "cache_write": 0,
+      "cache_read": 67328,
+      "output": 82,
+      "total": 76857,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 12.361,
+      "events_sha256": "5dde8bb7920836dd01cbb16d985a6c7a537742ce7eb6e4e4c34069753bd3ce73",
+      "regular_input": 9449,
+      "cache_write": 0,
+      "cache_read": 33152,
+      "output": 221,
+      "total": 42822,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 2452
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 4.707,
+      "events_sha256": "320ff5d2ef3b51d231f3e7e72a9db7296b23f5793176a01a26b37aa626b5a2c6",
+      "regular_input": 12561,
+      "cache_write": 0,
+      "cache_read": 12288,
+      "output": 37,
+      "total": 24886,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.083,
+      "events_sha256": "521cec2136dc17d764e188e61fda0a51e553f70b0c73caf1f3317b8375c63c0c",
+      "regular_input": 8469,
+      "cache_write": 0,
+      "cache_read": 51328,
+      "output": 263,
+      "total": 60060,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 278
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 11.186,
+      "events_sha256": "89f9bef915fd8ab1aca3f8e322a26b759c540fca1542ea79c2ae5569fa1198e1",
+      "regular_input": 753,
+      "cache_write": 0,
+      "cache_read": 60288,
+      "output": 264,
+      "total": 61305,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1446
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 9.168,
+      "events_sha256": "b9b71574a015a6841652181cb28f9482a69d2892598ba256111206ed5fd6c924",
+      "regular_input": 13976,
+      "cache_write": 0,
+      "cache_read": 32640,
+      "output": 105,
+      "total": 46721,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 5.124,
+      "events_sha256": "c4105c56d4ff4ef092a27fb53230d8fe19b032460aceb75d1afc5b1d4ba62675",
+      "regular_input": 17096,
+      "cache_write": 0,
+      "cache_read": 12288,
+      "output": 37,
+      "total": 29421,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 12.328,
+      "events_sha256": "af191cbd7ab4cb0d8bcdfa30517406f962864794cd5ff2277fdd3ab8b2b16c16",
+      "regular_input": 10952,
+      "cache_write": 0,
+      "cache_read": 63360,
+      "output": 105,
+      "total": 74417,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 10.059,
+      "events_sha256": "7a60f30508f695e68c2c75632815798358f1eacee0077e42de1f98b4c619a2c8",
+      "regular_input": 6225,
+      "cache_write": 0,
+      "cache_read": 80000,
+      "output": 106,
+      "total": 86331,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 10.899,
+      "events_sha256": "fedd07aa4f33dfbdee875ce3d98178ab68ff93d5bce6ce8c496717fecd609603",
+      "regular_input": 8074,
+      "cache_write": 0,
+      "cache_read": 31360,
+      "output": 205,
+      "total": 39639,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 2452
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 5.592,
+      "events_sha256": "fec2b46d6bd3c88fc09abe45b79c09332f4f15b6b57c27faf75532935dda8571",
+      "regular_input": 4938,
+      "cache_write": 0,
+      "cache_read": 19968,
+      "output": 37,
+      "total": 24943,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 13.097,
+      "events_sha256": "81d1f14eddf1ac9dac02630d2b6d9a6fa9f1ab921d1af0886d555e336068fcfc",
+      "regular_input": 984,
+      "cache_write": 0,
+      "cache_read": 49536,
+      "output": 279,
+      "total": 50799,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 278
+    },
+    {
+      "client": "codex",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 12.698,
+      "events_sha256": "4f2d43e3f5f0d0037cd535e33b0359b9e840e34ef2a05e41ef9856e902d9db33",
+      "regular_input": 1075,
+      "cache_write": 0,
+      "cache_read": 50816,
+      "output": 280,
+      "total": 52171,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "command_execution",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1446
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.326,
+      "events_sha256": "14ca2ffaccb19d3f3ee30d2834fa6fb41d078da0d95df4446dc552f7e5ea653f",
+      "regular_input": 626,
+      "cache_write": 15393,
+      "cache_read": 11076,
+      "output": 255,
+      "total": 27350,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28962
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 3.917,
+      "events_sha256": "0b6507fd04b9c888d8f838b5cc3f0cef4249016eb115468a587d9d3257966e31",
+      "regular_input": 2,
+      "cache_write": 91,
+      "cache_read": 17707,
+      "output": 62,
+      "total": 17862,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.248,
+      "events_sha256": "1800efeef13311cee680589a0c90fcca9c9cb3ede68c1516cb29d109cf5aea9c",
+      "regular_input": 4,
+      "cache_write": 9177,
+      "cache_read": 35828,
+      "output": 278,
+      "total": 45287,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28877
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 9.276,
+      "events_sha256": "9cf6f4fd193fcf5e3edc5b64af2926b243cf9cd90a3d92d365a9efe44a551925",
+      "regular_input": 4,
+      "cache_write": 9110,
+      "cache_read": 54182,
+      "output": 211,
+      "total": 63507,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28877
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.585,
+      "events_sha256": "52c791eb89bce4bc0b21bc8791b4b43c4bd54e2002c3f23d0776df84e6c7da63",
+      "regular_input": 626,
+      "cache_write": 5584,
+      "cache_read": 14802,
+      "output": 336,
+      "total": 21348,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 2451
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 3.697,
+      "events_sha256": "b6f71fdbb6283e830b782c8a18dcd7a91f934d532b6ef75b72798044bdce13c7",
+      "regular_input": 2,
+      "cache_write": 91,
+      "cache_read": 10761,
+      "output": 62,
+      "total": 10916,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 9.486,
+      "events_sha256": "1c544dba3a7f2b3cbb6e65973c4749c6d08c70052502035bfe8e749c6dda6400",
+      "regular_input": 4,
+      "cache_write": 721,
+      "cache_read": 21936,
+      "output": 384,
+      "total": 23045,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 277
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.622,
+      "events_sha256": "ea9ccf3a0b9b4c4748615c7f34e35cc1f85ce5c11e786b0f02191f2583f3d5f9",
+      "regular_input": 4,
+      "cache_write": 1082,
+      "cache_read": 23378,
+      "output": 384,
+      "total": 24848,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1445
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.208,
+      "events_sha256": "1286e5d9b96d1f1f5c2b9738ffb42e219411909269750425ab44ea6e01a0dfb4",
+      "regular_input": 626,
+      "cache_write": 0,
+      "cache_read": 26469,
+      "output": 255,
+      "total": 27350,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28962
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 3.47,
+      "events_sha256": "5473e892ef0474b1677d819f509f0ce5ee2c171f183a0aadc42b2447b477b3c1",
+      "regular_input": 2,
+      "cache_write": 0,
+      "cache_read": 17798,
+      "output": 62,
+      "total": 17862,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.762,
+      "events_sha256": "368042f054c7095634a76def95af5742d66c2475a5924a29a8c336238bb2beaf",
+      "regular_input": 4,
+      "cache_write": 9020,
+      "cache_read": 36060,
+      "output": 313,
+      "total": 45397,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28962
+    },
+    {
+      "client": "claude",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.797,
+      "events_sha256": "d8d97210e17c54e62b65bbaa81ddb257f7877bba5a8ca5e33dc4a83ef7b8fa3e",
+      "regular_input": 4,
+      "cache_write": 9180,
+      "cache_read": 54332,
+      "output": 241,
+      "total": 63757,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28962
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.481,
+      "events_sha256": "1f614ce8bcf5bea8b36d72a23ca07d2dd3543269f642a73b0b59696138776b2f",
+      "regular_input": 626,
+      "cache_write": 0,
+      "cache_read": 20386,
+      "output": 335,
+      "total": 21347,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 2451
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 3.4,
+      "events_sha256": "ae3f2d204615c47cb50266ccf83465979211cd7d6ad506e4c550e7fd291654e0",
+      "regular_input": 2,
+      "cache_write": 0,
+      "cache_read": 10852,
+      "output": 62,
+      "total": 10916,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 7.897,
+      "events_sha256": "42ec09423f5631d3ba188dde884bcb0fb632a1cf6cb3016a86830504c8f31653",
+      "regular_input": 4,
+      "cache_write": 0,
+      "cache_read": 22657,
+      "output": 384,
+      "total": 23045,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 277
+    },
+    {
+      "client": "claude",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 8.21,
+      "events_sha256": "bc545248ef24ab701f6fcbcfdf99f957fa51db136824e05a6bb2997bd2d1cd48",
+      "regular_input": 4,
+      "cache_write": 0,
+      "cache_read": 24460,
+      "output": 384,
+      "total": 24848,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "Bash",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": true,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1445
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 15.673,
+      "events_sha256": "fd1caed067adcc7a872f1b4e7f3c54b52c948cf6a53945e4fb910051ad526e33",
+      "regular_input": 16881,
+      "cache_write": 0,
+      "cache_read": 20898,
+      "output": 465,
+      "total": 38244,
+      "answer": "ポリシーと Lighthouse プロジェクトノートを読み、要求された JSON を返します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.874,
+      "events_sha256": "2de2251aeb2c07e1d574ff4886d8bafa79f62cc553a8edb20bc3abf3772111bc",
+      "regular_input": 280,
+      "cache_write": 0,
+      "cache_read": 20914,
+      "output": 94,
+      "total": 21288,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 11.882,
+      "events_sha256": "efad69e20019f4bac9c4ebe19e4f07bb8445a612ce5a926578af8238b1e4132a",
+      "regular_input": 4195,
+      "cache_write": 0,
+      "cache_read": 42617,
+      "output": 194,
+      "total": 47006,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 12.743,
+      "events_sha256": "33b590f0b2e6ac4736a1e1858c43e42e88f9751ac6b650fa138653bdb08ccbfd",
+      "regular_input": 4135,
+      "cache_write": 0,
+      "cache_read": 50954,
+      "output": 215,
+      "total": 55304,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 1,
+      "tool_calls": 2,
+      "elapsed_seconds": 20.374,
+      "events_sha256": "2810797914e22ab5899fe86d8a52a33fb8f3e92b9eb43277ffd56cd907cf9765",
+      "regular_input": 14711,
+      "cache_write": 0,
+      "cache_read": 39598,
+      "output": 750,
+      "total": 55059,
+      "answer": "デモ vault の Lighthouse ノートと知識ポリシーを取得します。\nポリシーから Git 同期の記述を確認します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        },
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ],
+          "compact": false,
+          "explicit_section": false,
+          "both_required_headings_named": false
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 2957
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 9.665,
+      "events_sha256": "882027f13377757afdd3e72e80d905ec5e020427f49a9e0da67c729fd20f36f1",
+      "regular_input": 8116,
+      "cache_write": 0,
+      "cache_read": 11684,
+      "output": 102,
+      "total": 19902,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 15.209,
+      "events_sha256": "f223f290222b030926e3702d3e293ed12083aa839aaae6bcacf440c96f1aa514",
+      "regular_input": 1118,
+      "cache_write": 0,
+      "cache_read": 37997,
+      "output": 504,
+      "total": 39619,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 372
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 1,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.141,
+      "events_sha256": "85be2d5679f014593a85da39f3b097b7d6400bebc9c2e49acbfb4c30a8fcd318",
+      "regular_input": 1089,
+      "cache_write": 0,
+      "cache_read": 39969,
+      "output": 493,
+      "total": 41551,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 1540
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 1,
+      "elapsed_seconds": 17.724,
+      "events_sha256": "2cf4b7bff3647b74552b21a80babda594e39c70b286d4c339f0a5358df2f88bc",
+      "regular_input": 16905,
+      "cache_write": 0,
+      "cache_read": 20898,
+      "output": 489,
+      "total": 38292,
+      "answer": "ポリシーと Lighthouse ノートを読み、リリース情報と Git 同期設定を確認します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.486,
+      "events_sha256": "ba45cc8147fd0d0d007c17b8ab5d3acb8a998d2588f13f983abf05bf260ee261",
+      "regular_input": 280,
+      "cache_write": 0,
+      "cache_read": 20938,
+      "output": 94,
+      "total": 21312,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 13.323,
+      "events_sha256": "1d863c03ccfd435ab4b1b55e5a104a51b59b75497c0adce9a65cc6c83c872e93",
+      "regular_input": 4191,
+      "cache_write": 0,
+      "cache_read": 42665,
+      "output": 193,
+      "total": 47049,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "baseline",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.203,
+      "events_sha256": "2833a27d8844a5f99d624fc350fb22e3b93a9e49b00ff15d27e67cec92e2dad7",
+      "regular_input": 4142,
+      "cache_write": 0,
+      "cache_read": 50997,
+      "output": 221,
+      "total": 55360,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "full-shell-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ]
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 28878
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 1,
+      "tool_calls": 2,
+      "elapsed_seconds": 19.152,
+      "events_sha256": "22898daffe9f73236966952b09337a9ac4a5328c587a794de6148bdf8df84194",
+      "regular_input": 14624,
+      "cache_write": 0,
+      "cache_read": 39532,
+      "output": 698,
+      "total": 54854,
+      "answer": "デモ vault から Lighthouse の現行情報と Git 同期設定を取得します。\nポリシーから Git 同期設定を確認します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "CONTENT"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        },
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Policies/Knowledge policy.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": false
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 3000
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 2,
+      "tool_calls": 0,
+      "elapsed_seconds": 10.385,
+      "events_sha256": "156e873aab449364e00d7573aee562321529f533f315cee4316eeb33c6342077",
+      "regular_input": 311,
+      "cache_write": 0,
+      "cache_read": 18656,
+      "output": 91,
+      "total": 19058,
+      "answer": "{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": true
+      },
+      "helper_statuses": [],
+      "tool_actions": [],
+      "permission_denials": 0,
+      "tool_output_bytes": 0
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 3,
+      "tool_calls": 1,
+      "elapsed_seconds": 14.525,
+      "events_sha256": "9ae51dc673ac33ef053820b7e80a19b10713f9b5997d1ce560210c7f751acda9",
+      "regular_input": 854,
+      "cache_write": 0,
+      "cache_read": 38160,
+      "output": 502,
+      "total": 39516,
+      "answer": "ローカルのポリシーと Lighthouse ノートをハッシュで確認します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"blue\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "4b82530e81fd1a69495b6ae210fadfb2a738d6e8ffd67b4a1ee093954e7786ea",
+          "status": "UNCHANGED"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": true
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 372
+    },
+    {
+      "client": "cursor",
+      "arm": "improved",
+      "repetition": 2,
+      "stage": 4,
+      "tool_calls": 2,
+      "elapsed_seconds": 16.324,
+      "events_sha256": "862fe733541d787d178a5a051405852121c55e6ad3daa0bc15c09133dfebedcb",
+      "regular_input": 1729,
+      "cache_write": 0,
+      "cache_read": 60974,
+      "output": 608,
+      "total": 63311,
+      "answer": "Lighthouse が更新されたため、Release gates セクションを取得します。\n{\"projects\":[{\"project\":\"Lighthouse\",\"channel\":\"teal\",\"reviewer\":\"Mira\",\"blocker\":\"security sign-off\"}],\"automatic_git_sync\":false}",
+      "quality": {
+        "exact_facts": true,
+        "exact_facts_and_format": false
+      },
+      "helper_statuses": [
+        {
+          "path": "Policies/Knowledge policy.md",
+          "sha256": "7c269c0df3a95a5d582f7a24fff24cfd585ec920424438197401c1637e3358c3",
+          "status": "UNCHANGED"
+        },
+        {
+          "path": "Projects/Lighthouse.md",
+          "sha256": "df86d6a32cb23692ad3653a182439b8f10f5ede39a1954befdc4cfbbd3ad8203",
+          "status": "CONTENT"
+        }
+      ],
+      "tool_actions": [
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-check",
+          "notes": [
+            "Policies/Knowledge policy.md",
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": false,
+          "both_required_headings_named": false
+        },
+        {
+          "tool": "shellToolCall",
+          "mode": "helper-read",
+          "notes": [
+            "Projects/Lighthouse.md"
+          ],
+          "compact": false,
+          "explicit_section": true,
+          "both_required_headings_named": false
+        }
+      ],
+      "permission_denials": 0,
+      "tool_output_bytes": 3103
+    }
+  ],
+  "publication_scope": "Current-kit and direct-read subset of the 2026-10-21 measurement batch. Omitted-arm results are not published here; no remeasurement or cache reset. All direct/current trials and their original counters are retained."
+}
