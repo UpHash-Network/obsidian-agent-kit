@@ -18,14 +18,37 @@ relevant notes, reuse what they already know, and check for changes when needed.
 Keep team knowledge in a separate private Git repository; keep personal knowledge
 local. Obsidian is the human editor, and Git can synchronize the team's files.
 
-```mermaid
-flowchart LR
-  People[People / Obsidian] <--> Notes[Scoped Markdown vaults]
-  Notes <-->|explicit team sync| Git[Private Git repository]
-  Agents[Codex / Claude Code / Cursor] -->|focused read and hash check| Helper[Local Python helper]
-  Helper --> Notes
-  Agents -->|authorized durable decisions| Notes
-```
+![Obsidian Agent Kit by UPHASH: shared Markdown knowledge for Codex, Claude Code and Cursor; best measured reductions of 53.2%, 48.0% and 40.7%, under the conditions below.](docs/assets/agent-kit-v0.1.2-en.png)
+
+[Full-size English image](docs/assets/agent-kit-v0.1.2-en.png) · [日本語画像](docs/assets/agent-kit-v0.1.2-ja.png)
+
+## Measured token usage
+
+**Best observed reduction for each client, among three tested workloads.**
+Each total combines both four-turn runs; the winning workload differs by client.
+
+| Client | Direct reading | With v0.1.2 | Reduction | Workload |
+|---|---:|---:|---:|---|
+| Codex | 703,457 | 329,232 | **53.2%** | 3 projects, full-read instruction |
+| Claude Code | 308,372 | 160,313 | **48.0%** | 1 project, full-read instruction |
+| Cursor | 508,440 | 301,261 | **40.7%** | 3 projects, full-read instruction |
+
+Measured **2026-10-21** on macOS CLIs using **12 fictional English notes of about
+28 KB each**, plus a policy. Two runs × four turns per client/method; input
+including cache counted once, plus output. Models: GPT-6.1-sol, Claude Opus 5,
+and Composer 2.5. Provider caches were not cleared. Full-read instructions
+sometimes produced narrower reads or recovery calls; all are included.
+
+The kit detected updates in **18/18 sessions**, including a change with identical
+file size and modification time; direct reading also detected every update.
+Kit answers matched the expected facts in **72/72 turns**; strict JSON-only
+format passed in 63/72.
+
+These are selected maxima, not typical or guaranteed savings. Some other
+conditions increased usage; token totals are not billed cost or quota savings.
+[All nine comparisons, correctness and conditions](benchmarks/v0.1.2/README.md) ·
+[Counter data](benchmarks/v0.1.2/summary.json) ·
+[Measure your own workflow](docs/verification.md#token-measurement)
 
 ## How this can save tokens
 
@@ -56,23 +79,6 @@ The earlier conversation may still count toward input tokens, and rules, hashes
 and tool calls have overhead. The largest opportunity is repeated work with
 substantial notes; tiny, one-off tasks or clients that already avoid rereads may
 save little or even use more. Actual totals depend on the model, task and caching.
-
-**Best observed v0.1.2 reductions versus direct reading:**
-
-| Client | Reduction | Workload |
-|---|---:|---|
-| Codex | 53.2% | 3 projects, full-read instruction |
-| Claude Code | 48.0% | 1 project, full-read instruction |
-| Cursor | 40.7% | 3 projects, full-read instruction |
-
-These are each client's best of **three tested workloads**, summing both runs,
-not typical or guaranteed savings. The experiment used twelve fictional English
-notes of about 28 KB each, two runs × four turns per client/method, on macOS CLIs.
-Totals include cached input once plus output. Agents sometimes narrowed direct
-reads; other conditions increased usage. Updated content was detected in all
-18 kit sessions. [All current-version results and conditions](benchmarks/v0.1.2/README.md)
-include increases, answer checks and reproducible data. These are not cost savings.
-Use the [comparison method](docs/verification.md#token-measurement) for your own work.
 
 ## What changes in daily work?
 
